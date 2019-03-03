@@ -1,0 +1,106 @@
+
+@font-face {
+    font-family: 'iconfont';  /* project id 1062268 */
+    src: url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.eot');
+    src: url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1062268_abeprxdjsdr.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+    display: flex;
+    height: 55px;
+    line-height: 55px;
+    box-shadow: 0 3px 3px gray;
+}
+
+header > section{
+    /*border: 1px solid black;*/
+    display: flex;
+}
+
+.leftHeader{
+    flex-grow: 1;
+    padding-left: 45px;
+    font-size: 1.5em;
+}
+
+.leftHeader .siteIcon{
+    font-size: 1.5em;
+}
+
+.siteName{
+    display: inline;
+}
+
+.middleHeader{
+    flex-grow: 2;
+    display: flex;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.middleHeader div{
+    flex-grow: 1;
+}
+
+.middleHeader a:hover{
+    display: block;
+    height: 100%;
+    background-color: #EEEEEE;
+    background-size: 30px;
+    color: #38B7EB;
+}
+
+.rightHeader{
+    flex-grow: 1;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.rightHeader div{
+    height: 60%;
+}
+
+.rightHeader, .rightHeader div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.writeBlogHeader:hover{
+    color: #E37F54;
+}
+
+.login,.register{
+    width: 20%;
+    background-color: #0E90D2;
+    border-radius: 20%;
+    border: 1px solid black;
+}
+
+.login a,.register a{
+    color: white;
+}
+
+
+.login:hover{
+    background-color: #38B7EB;
+}
+
+.register:hover{
+    background-color: #38B7EB;
+}
+
+
+
