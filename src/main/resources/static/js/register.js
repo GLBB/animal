@@ -2,8 +2,10 @@
 function verificationCode() {
     emailElem = document.getElementById("email");
     errorElm = document.getElementById("emailError");
-    console.log(errorElm)
+    // console.log(errorElm)
     email = emailElem.value;
+    console.log("value: "+email);
+    // console.log("textContent: " + emailElem.textContent)
     reg = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;
     if (email === "") {
         errorElm.textContent = "邮箱不能为空";
@@ -13,7 +15,8 @@ function verificationCode() {
         errorElm.style.display = "block";
     } else{
         // 通过 ajax 请求发送 email 信息
-
+        var success = sendEmail(email, errorElm);
+        console.log("success: " + success);
 
     }
 
@@ -23,7 +26,7 @@ function verificationCode() {
  * 把邮箱号码发送到服务端
  * @param email
  */
-function sendEmail(email) {
+function sendEmail(email, messageElem) {
     var xmlhttp;
     if (window.XMLHttpRequest)
     {
@@ -40,11 +43,19 @@ function sendEmail(email) {
         // 服务端收到邮箱号
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
+            var jsonResult = xmlhttp.responseText;
+            console.log(jsonResult);
+            var msg = JSON.parse(jsonResult);
+            messageElem.innerText = msg.message;
+            if (!messageElem.state){
+                messageElem.style.color = "red";
+                return false;
+            }
             return true;
         } else {
             return false;
         }
     }
-    xmlhttp.open("GET","/try/ajax/ajax_info.txt",true);
+    xmlhttp.open("GET","/email/register?email=" + email, true);
     xmlhttp.send();
 }

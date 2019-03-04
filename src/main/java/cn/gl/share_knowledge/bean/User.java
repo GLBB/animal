@@ -1,9 +1,15 @@
 package cn.gl.share_knowledge.bean;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 @Entity
@@ -15,18 +21,32 @@ public class User {
 //    private byte[] headPortrait;
     private String headPortraitPath;
     private String name;
+
     @Column(nullable = false)
     private String nickName;
+
     private String email;
     private String phone;
     private String sex;
     private LocalDate birthDay;
+
     @Column(nullable = false)
     private String password;
+    // 账号认证
     private boolean verify;
+
+    public User() {
+    }
+
 
     public User(String nickName, String password) {
         this.nickName = nickName;
+        this.password = password;
+    }
+
+    public User(String nickName, String email, String password) {
+        this.nickName = nickName;
+        this.email = email;
         this.password = password;
     }
 

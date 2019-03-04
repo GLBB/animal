@@ -70,16 +70,15 @@
 
             <div class="am-form-group">
                 <label for="username">用户名</label>
-                <input type="text" class="" id="username" placeholder="用户名">
+                <input type="text" class="" id="username" name="nickName" placeholder="用户名">
             </div>
 
             <div class="am-form-group">
                 <label for="password">密码</label>
-                <input type="password" class="" id="password" placeholder="设置个密码吧">
+                <input type="password" class="" id="password" name="password" placeholder="设置个密码吧">
             </div>
-
+            <p th:text="${message}" style="color: red"></p>
             <p><button type="submit" class="am-btn am-btn-primary">提交</button></p>
-
 
         </fieldset>
     </form>

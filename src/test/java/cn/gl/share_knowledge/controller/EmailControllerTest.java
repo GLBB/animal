@@ -9,7 +9,7 @@ public class EmailControllerTest {
     @Test
     public void test1(){
         EmailController emailController = new EmailController();
-        emailController.registerEmail("unbeatableglbb@outlook.com");
+//        emailController.registerEmail("unbeatableglbb@outlook.com");
     }
 
 }

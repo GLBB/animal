@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="en" xmlns:th="http://www.thymeleaf.org">
   <meta charset="UTF-8">
   <title>Login Page | Amaze UI Example</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,8 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
-  <link rel="stylesheet" href="/share_knowledge_page/assets/css/amazeui.min.css"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png" th:href="@{assets/i/favicon.png}" />
+  <link rel="stylesheet" href="/share_knowledge_page/assets/css/amazeui.min.css" th:href="@{assets/css/amazeui.min.css}"/>
   <style>
     .header {
       text-align: center;
@@ -28,7 +28,6 @@
 <div class="header">
   <div class="am-g">
     <h1>Animal</h1>
-    <p>野性！OR 兽性！</p>
   </div>
   <hr />
 </div>
