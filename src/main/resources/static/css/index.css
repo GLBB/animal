@@ -1,0 +1,47 @@
+.notice{
+    border: 1px solid black;
+}
+
+.self-info{
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 0px 5px 5px 5px gray;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.comment-div{
+    border: 1px solid black;
+    margin-top: 20px;
+    box-shadow: 0px 5px 5px 5px gray;
+    border-radius: 10px;
+}
+
+.headPortait{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-right: 20px;
+}
+
+.article-meta{
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px 5px gray;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.page li{
+    display: inline;
+}
+
+.section{
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px 5px gray;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.author-notice{
+
+}

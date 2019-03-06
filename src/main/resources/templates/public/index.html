@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Index</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="/share_knowledge_page/assets/i/favicon.png" th:href="@{/assets/i/favicon.png}">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="/share_knowledge_page/assets/css/amazeui.min.css" th:href="@{assets/css/amazeui.min.css}">
+    <link rel="stylesheet" href="/share_knowledge_page/assets/css/app.css" th:href="@{assets/css/app.css}">
+    <link rel="stylesheet" href="/share_knowledge_page/css/index.css" th:href="@{css/index.css}">
+</head>
+<body>
+
+<header th:replace="~{component/header}"></header>
+
+
+<main>
+    <!--<div class="am-g">-->
+        <!--<div class="am-u-sm-10 notice">-->
+            <!--<p>易一名而含三义：简易一也；变易二也；不易三也。</p>-->
+        <!--</div>-->
+        <!--<div class="am-u-sm-2">-->
+            <!--<p >公告</p>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="am-g">
+        <div class="am-u-sm-3">
+            <div class="self-info">
+                <img class="headPortait" src="../../img/default_head_portait.png" th:src="@{/img/default_head_portait.png}">
+                <p>张炫酷</p>
+                <p>多年以后，愿你的城市，有清风，有烈酒，也有人是你的归途。</p>
+                <p>微信: <span>xkjdjfjsjfjfjsfd</span></p>
+                <p>QQ: <span>542255555555</span></p>
+                <!--<p></p>-->
+            </div>
+            <div class="comment-div">
+                <!--回复博主的评论-->
+                <h3>最新评论</h3>
+                <hr/>
+                <div>
+                    <a href="#">2019春招-腾讯面试</a>
+                    <p>2019-03-05</p>
+                    <p><span>学编程的咸蛋超人：@张海洋 嘻嘻 最近也准</span>...</p>
+                    <hr/>
+                </div>
+                <div>
+                    <a href="#">2019春招-腾讯面试</a>
+                    <p>2019-03-05</p>
+                    <p><span>学编程的咸蛋超人：@张海洋 嘻嘻 最近也准</span>...</p>
+                    <hr/>
+                </div>
+                <div>
+                    <a href="#">2019春招-腾讯面试</a>
+                    <p>2019-03-05</p>
+                    <p><span>学编程的咸蛋超人：@张海洋 嘻嘻 最近也准</span>...</p>
+                    <hr/>
+                </div>
+
+                <a href="#">下一页</a>
+            </div>
+            <!--<div>-->
+                <!--&lt;!&ndash;给博主留言&ndash;&gt;-->
+                <!--<p><span>Tomy: hello</span><span>2019-02-20</span></p>-->
+                <!--<br/>-->
+                <!--<p><span>Tomy: hello</span><span>2019-02-20</span></p>-->
+                <!--<br/>-->
+                <!--<p><span>Tomy: hello</span><span>2019-02-20</span></p>-->
+                <!--<br/>-->
+                <!--<p><span>Tomy: hello</span><span>2019-02-20</span></p>-->
+                <!--<br/>-->
+                <!--<a href="#">下一页</a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="am-u-sm-6">
+            <div class="article-meta">
+                <a href="#">2019春招-腾讯面试</a>
+                <p><span>原创</span><span>2019-03-02</span><span>张海洋</span><span>面试</span></p>
+                <p>一面(电话面)：43分钟自我介绍mysql索引底层是怎么实现的？为什么要使用b+树而不用二叉树呢。JVM的内存划分是什么？本地方法栈中存放什么？声明一个类它是如何加载的？初始化一个类它的顺序是怎么样的？error跟exception有什么区别？OOM是error还是exception？你知道css的盒子模型吗？两个div分别是A、B，A的margin是6，B的margin是8，那么A、B之间的间距是多少？(我当时天真的以为是它俩相加)...</p>
+                <a href="#">阅读全文</a>
+                <p><span>面经</span><span>春招</span><span>面试</span><span>原创</span></p>
+            </div>
+            <div class="article-meta">
+                <a href="#">2019春招-腾讯面试</a>
+                <p><span>原创</span><span>2019-03-02</span><span>张海洋</span><span>面试</span></p>
+                <p>一面(电话面)：43分钟自我介绍mysql索引底层是怎么实现的？为什么要使用b+树而不用二叉树呢。JVM的内存划分是什么？本地方法栈中存放什么？声明一个类它是如何加载的？初始化一个类它的顺序是怎么样的？error跟exception有什么区别？OOM是error还是exception？你知道css的盒子模型吗？两个div分别是A、B，A的margin是6，B的margin是8，那么A、B之间的间距是多少？(我当时天真的以为是它俩相加)...</p>
+                <a href="#">阅读全文</a>
+                <p><span>面经</span><span>春招</span><span>面试</span><span>原创</span></p>
+            </div>
+            <div class="article-meta">
+                <a href="#">2019春招-腾讯面试</a>
+                <p><span>原创</span><span>2019-03-02</span><span>张海洋</span><span>面试</span></p>
+                <p>一面(电话面)：43分钟自我介绍mysql索引底层是怎么实现的？为什么要使用b+树而不用二叉树呢。JVM的内存划分是什么？本地方法栈中存放什么？声明一个类它是如何加载的？初始化一个类它的顺序是怎么样的？error跟exception有什么区别？OOM是error还是exception？你知道css的盒子模型吗？两个div分别是A、B，A的margin是6，B的margin是8，那么A、B之间的间距是多少？(我当时天真的以为是它俩相加)...</p>
+                <a href="#">阅读全文</a>
+                <p><span>面经</span><span>春招</span><span>面试</span><span>原创</span></p>
+            </div>
+
+            <ul class="page">
+                <li><a href="#">上一页</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">下一页</a></li>
+            </ul>
+        </div>
+
+        <div class="am-u-sm-3">
+            <div class="section">
+                <h3>公告</h3>
+                <p>每个人都有一个死角，</p>
+                <p>自己走不出来，别人也闯不进去。</p>
+                <p>我把最深沉的秘密放在那里。</p>
+                <p>你不懂我，我不怪你。</p>
+            </div>
+            <div class="section">
+                <h3>标签云</h3>
+                <a href="#">春招</a>
+                <a href="#">面经</a>
+                <a href="#">年度总结</a>
+                <a href="#">设计模式</a>
+                <a href="#">JVM</a>
+                <a href="#">排序</a>
+                <a href="#">Mysql</a>
+            </div>
+            <div class="section">
+                <h3>网站信息</h3>
+                <p>文章总数: <span>55篇</span></p>
+                <p>标签总数: <span>31个</span></p>
+                <p>留言总数: <span>59条</span></p>
+                <p>评论总数: <span>83条</span></p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/share_knowledge_page/assets/js/jquery.min.js" th:src="@{assets/js/jquery.min.js}"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="share_knowledge_page/assets/js/amazeui.ie8polyfill.min.js" th:src="@{assets/js/amazeui.ie8polyfill.min.js}"></script>
+<![endif]-->
+<script src="/share_knowledge_page/assets/js/amazeui.min.js" th:src="@{assets/js/amazeui.min.js}"></script>
+</body>
+</html>
