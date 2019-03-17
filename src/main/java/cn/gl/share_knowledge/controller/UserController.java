@@ -2,6 +2,8 @@ package cn.gl.share_knowledge.controller;
 
 import cn.gl.share_knowledge.bean.User;
 import cn.gl.share_knowledge.dto.UserDTO;
+import cn.gl.share_knowledge.dto.UserLoginDTO;
+import cn.gl.share_knowledge.exception.LoginException;
 import cn.gl.share_knowledge.exception.RegisterException;
 import cn.gl.share_knowledge.message.Message;
 import cn.gl.share_knowledge.service.UserService;
@@ -15,6 +17,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.net.http.HttpResponse;
 
 @Controller
 public class UserController {
@@ -62,5 +69,45 @@ public class UserController {
     @GetMapping("/login")
     public String login(User user){
         return "user/login";
+    }
+
+    /**
+     * 用户输入邮箱和密码后登陆
+     * 检验邮箱和密码对不对
+     * 成功后保存 session
+     * 保存 cookie
+     * @param user
+     * @return
+     */
+    @PostMapping("/login")
+    public String userLogin(@Validated UserLoginDTO user, BindingResult bindingResult, Model model, HttpSession session, HttpServletResponse response){
+        if (bindingResult.hasErrors()) {
+            FieldError fieldError = bindingResult.getFieldError();
+            model.addAttribute("err_msg", fieldError.getDefaultMessage());
+            return "user/login";
+        }
+
+        try {
+            User validateUser = userService.login(user);
+            session.setAttribute("user", validateUser);
+            // 保存 cookie, 保存 3 天
+            if ("true".equals(user.getRemenberPassword())){
+                Cookie emailCookie = new Cookie("email", user.getEmail());
+                emailCookie.setPath("/");
+                emailCookie.setMaxAge(60*60*24*3);
+                emailCookie.setHttpOnly(true);
+                response.addCookie(emailCookie);
+                Cookie pwdCookie = new Cookie("password", user.getPassword());
+                emailCookie.setPath("/");
+                emailCookie.setMaxAge(60*60*24*3);
+                emailCookie.setHttpOnly(true);
+                response.addCookie(pwdCookie);
+            }
+            return "redirect:/";
+        } catch (LoginException e) {
+            model.addAttribute("err_msg", e.getMessage());
+            return "user/login";
+        }
+
     }
 }

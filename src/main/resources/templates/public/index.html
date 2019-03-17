@@ -19,25 +19,25 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+    <link rel="icon" sizes="192x192" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{/assets/i/app-icon72x72@2x.png}">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-    <link rel="apple-touch-icon-precomposed" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+    <link rel="apple-touch-icon-precomposed" href="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{/assets/i/app-icon72x72@2x.png}">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{assets/i/app-icon72x72@2x.png}">
+    <meta name="msapplication-TileImage" content="/share_knowledge_page/assets/i/app-icon72x72@2x.png" th:href="@{/assets/i/app-icon72x72@2x.png}">
     <meta name="msapplication-TileColor" content="#0e90d2">
 
-    <link rel="stylesheet" href="/share_knowledge_page/assets/css/amazeui.min.css" th:href="@{assets/css/amazeui.min.css}">
-    <link rel="stylesheet" href="/share_knowledge_page/assets/css/app.css" th:href="@{assets/css/app.css}">
-    <link rel="stylesheet" href="/share_knowledge_page/css/index.css" th:href="@{css/index.css}">
+    <link rel="stylesheet" href="/share_knowledge_page/assets/css/amazeui.min.css" th:href="@{/assets/css/amazeui.min.css}">
+    <link rel="stylesheet" href="/share_knowledge_page/assets/css/app.css" th:href="@{/assets/css/app.css}">
+    <link rel="stylesheet" href="/share_knowledge_page/css/index.css" th:href="@{/css/index.css}">
 </head>
 <body>
 
-<header th:replace="~{component/header}"></header>
+<header th:replace="~{component/header::header}"></header>
 
 
 <main>
@@ -54,7 +54,7 @@
         <div class="am-u-sm-3">
             <div class="self-info">
                 <img class="headPortait" src="../../img/default_head_portait.png" th:src="@{/img/default_head_portait.png}">
-                <p>张炫酷</p>
+                <p th:text="${session.user} ? ${session.user.nickName}:'佚名'" >佚名</p>
                 <p>多年以后，愿你的城市，有清风，有烈酒，也有人是你的归途。</p>
                 <p>微信: <span>xkjdjfjsjfjfjsfd</span></p>
                 <p>QQ: <span>542255555555</span></p>
