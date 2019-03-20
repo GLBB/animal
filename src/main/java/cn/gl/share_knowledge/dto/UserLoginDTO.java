@@ -24,11 +24,20 @@ public class UserLoginDTO {
     public UserLoginDTO() {
     }
 
+
+
     public User convert(){
         User user = new User();
         user.setEmail(email);
         user.setPassword(password);
         return user;
+    }
+
+    public static UserLoginDTO userDTO(String email, String pwd) {
+        UserLoginDTO userLoginDTO = new UserLoginDTO();
+        userLoginDTO.setEmail(email);
+        userLoginDTO.setPassword(pwd);
+        return userLoginDTO;
     }
 
     public String getEmail() {
