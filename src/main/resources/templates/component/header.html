@@ -85,16 +85,18 @@
         <!--</div>-->
         <!--</div>-->
 
-        <div class="am-topbar-right">
-            <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">用户名</button>
+
+
+        <div th:if="${session.user}" class="am-topbar-right">
+            <button id="username" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" th:text="${session.user.nickName}" onclick="window.location.href = '/admin'">用户名</button>
         </div>
 
-        <div class="am-topbar-right">
-            <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">注册</button>
+        <div th:if="!${session.user}" class="am-topbar-right">
+            <button id="register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href = '/users';">注册</button>
         </div>
 
-        <div class="am-topbar-right">
-            <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</button>
+        <div th:if="!${session.user}" class="am-topbar-right">
+            <button id="login" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href = '/login';">登录</button>
         </div>
     </div>
 </header>
