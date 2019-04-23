@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+import javax.servlet.http.HttpSession;
+
 @Component
 public class UserService {
 
@@ -59,6 +61,13 @@ public class UserService {
         } else {
             throw new LoginException("密码错误");
         }
+    }
+
+    public boolean isLogin(HttpSession session){
+        Object user = session.getAttribute("user");
+        if (user == null)
+            return false;
+        return true;
     }
 
 }

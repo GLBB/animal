@@ -28,6 +28,8 @@ public class LoginCookieInterceptor extends HandlerInterceptorAdapter {
         Object user = session.getAttribute("user");
         if (user != null) return true;
         Cookie[] cookies = request.getCookies();
+        if(cookies == null)
+            return true;
         Cookie emailCookie = null;
         Cookie pwdCookie = null;
         for (int i = 0; i < cookies.length; i++) {

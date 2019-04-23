@@ -6,3 +6,4 @@ mvnw*
 src/main/resources/application-dev.yml
 src/main/resources/config/db/mysql.properties
 src/main/resources/config/email.properties
+article/
